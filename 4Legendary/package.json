@@ -85,5 +85,7 @@
     },
     "devDependencies": {}
   },
-  "dependencies": {}
+  "dependencies": {
+    "arrive": "^2.3.1"
+  }
 }

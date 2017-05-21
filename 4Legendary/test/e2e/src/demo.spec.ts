@@ -1,5 +1,6 @@
 import {PageObject_Welcome} from './welcome.po';
 import {PageObject_Skeleton} from './skeleton.po';
+import {browser, element, by, By, $, $$, ExpectedConditions} from 'aurelia-protractor-plugin/protractor';
 
 describe('aurelia skeleton app', function() {
   let po_welcome: PageObject_Welcome;
@@ -9,7 +10,7 @@ describe('aurelia skeleton app', function() {
     po_skeleton = new PageObject_Skeleton();
     po_welcome = new PageObject_Welcome();
 
-    browser.loadAndWaitForAureliaPage("http://localhost:5000");
+    browser.loadAndWaitForAureliaPage("http://localhost:9000");
   });
 
   it('should load the page and display the initial page title', () => {
@@ -30,12 +31,9 @@ describe('aurelia skeleton app', function() {
     expect<any>(po_welcome.getFullname()).toBe('JOHN DOE');
   });
 
-/*
-  // Turned off due to a Chrome Bug
   it('should show alert message when clicking submit button', () => {
-    expect(po_welcome.openAlertDialog()).toBe(true);
+    expect<any>(po_welcome.openAlertDialog()).toBe(true);
   });
-*/
 
   it('should navigate to users page', () => {
     po_skeleton.navigateTo('#/users');

@@ -1,6 +1,5 @@
 var appRoot = 'src/';
-var outputRoot = 'wwwroot/dist/';
-var exportSourceRoot = 'wwwroot/';
+var outputRoot = 'dist/';
 var exporSrvtRoot = 'export/'
 
 module.exports = {
@@ -10,13 +9,12 @@ module.exports = {
   css: appRoot + '**/*.css',
   style: 'styles/**/*.css',
   output: outputRoot,
-	exportSourceRoot: exportSourceRoot,
   exportSrv: exporSrvtRoot,
   doc: './doc',
   e2eSpecsSrc: 'test/e2e/src/**/*.ts',
   e2eSpecsDist: 'test/e2e/dist/',
   dtsSrc: [
-    'typings/**/*.d.ts',
-    'custom_typings/**/*.d.ts'
+    './typings/**/*.d.ts',
+    './custom_typings/**/*.d.ts'
   ]
 }

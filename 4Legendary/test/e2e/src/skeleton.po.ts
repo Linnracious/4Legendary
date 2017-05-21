@@ -1,3 +1,5 @@
+import {browser, element, by, By, $, $$, ExpectedConditions} from 'aurelia-protractor-plugin/protractor';
+
 export class PageObject_Skeleton {
 
   constructor() {
@@ -8,7 +10,7 @@ export class PageObject_Skeleton {
     return browser.getTitle();
   }
 
-  navigateTo(href: string) {
+  navigateTo(href) {
     element(by.css('a[href="' + href + '"]')).click();
     return browser.waitForRouterComplete();
   }

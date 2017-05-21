@@ -3,7 +3,7 @@ module.exports = function(config) {
     basePath: './',
     frameworks: ['systemjs', 'jasmine'],
     systemjs: {
-      configFile: 'wwwroot/config.js',
+      configFile: 'config.js',
       config: {
         paths: {
           "*": "*",
@@ -11,8 +11,7 @@ module.exports = function(config) {
           "typescript": "node_modules/typescript/lib/typescript.js",
           "systemjs": "node_modules/systemjs/dist/system.js",
           'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
-          'es6-module-loader': 'node_modules/es6-module-loader/dist/es6-module-loader.js',
-          'jspm_packages/*': 'wwwroot/jspm_packages/*'
+          'es6-module-loader': 'node_modules/es6-module-loader/dist/es6-module-loader.js'
         },
         packages: {
           'test/unit': {
@@ -30,17 +29,14 @@ module.exports = function(config) {
         }
       },
       serveFiles: [
-        'src/**/*',
-        'wwwroot/jspm_packages/**/*.js'
+        'src/**/*.*',
+        'jspm_packages/**/*.js'
       ]
     },
     files: [
       'test/unit/setup.ts',
       'test/unit/*.ts'
     ],
-    proxies:{
-      '/base/jspm_packages/' : '/base/wwwroot/jspm_packages/'
-    },
     exclude: [],
     preprocessors: { },
     reporters: ['progress'],

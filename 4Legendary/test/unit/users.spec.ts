@@ -22,9 +22,9 @@ describe('the Users module', () => {
   it('sets fetch response to users', (done) => {
     var http = createHttpStub(),
         sut = new Users(<HttpClient>http),
-        itemStubs = [{avatar_url: 'u1_avatar', login: 'u1_login', html_url: 'u1_url'}],
-        itemFake = [{avatar_url: 'u2_avatar', login: 'u2_login', html_url: 'u2_url'}];
-
+        itemStubs = [1],
+        itemFake = [2];
+        
     http.items = itemStubs;
     
     sut.activate().then(() => {

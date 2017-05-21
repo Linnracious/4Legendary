@@ -12,15 +12,13 @@ const resources = require('../export.js');
 function getBundles() {
   let bl = [];
   for (let b in bundles.bundles) {
-    bl.push(paths.exportSourceRoot + b + '*.js');
+    bl.push(b + '*.js');
   }
   return bl;
 }
 
 function getExportList() {
-  return resources.list.map(function (item) {
-    return paths.exportSourceRoot + item;
-  }).concat(getBundles());
+  return resources.list.concat(getBundles());
 }
 
 function normalizeExportPaths() {
@@ -32,7 +30,7 @@ function normalizeExportPaths() {
 
     return jspm.normalize(packageName).then((normalized) => {
       const packagePath = normalized.substring(normalized.indexOf('jspm_packages'), normalized.lastIndexOf('.js'));
-      return fileList.map(file => paths.exportSourceRoot + packagePath + file);
+      return fileList.map(file => packagePath + file);
     });
   });
 
@@ -70,4 +68,3 @@ gulp.task('export', function(callback) {
     callback
   );
 });
-

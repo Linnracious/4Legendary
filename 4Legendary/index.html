@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Bootstrap Material Design -->
-    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
-    <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -38,6 +38,8 @@
     <script src="jspm_packages/npm/bluebird@3.4.1/js/browser/bluebird.min.js"></script>
     <script>
       System.import('aurelia-bootstrapper');
+      System.import('customcss/ripples.css!text')
+      System.import('customcss/bootstrap-material-design.css!text');
     </script>
   </body>
 </html>

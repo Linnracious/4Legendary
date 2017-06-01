@@ -1,7 +1,7 @@
 import 'bootstrap';
 import {$} from 'jquery';
-import 'uzairfarooq/arrive';
-import 'FezVrasta/bootstrap-material-design';
+//import 'arrive';
+import 'bootstrap-material-design';
 import {Router, RouterConfiguration} from 'aurelia-router';
 
 export class App {

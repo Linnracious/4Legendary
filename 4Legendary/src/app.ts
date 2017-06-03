@@ -1,7 +1,4 @@
 import 'bootstrap';
-import {$} from 'jquery';
-//import 'arrive';
-import 'bootstrap-material-design';
 import {Router, RouterConfiguration} from 'aurelia-router';
 
 export class App {
@@ -18,7 +15,4 @@ export class App {
     this.router = router;
   }
 
-  attached(){
-    $.material.init();
-  }
 }
